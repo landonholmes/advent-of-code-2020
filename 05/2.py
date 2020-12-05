@@ -8,7 +8,7 @@ def calculate_seat_info(boarding_pass):
         'raw': boarding_pass,
         'row': 0,
         'column': 0,
-        'seat_id': ''
+        'seat_id': 0
     }
 
     vertical_info = boarding_pass[0:7]
