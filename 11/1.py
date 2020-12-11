@@ -58,7 +58,6 @@ def compute_seat_state(grid, seat):
         seat['new_state'] = '#'
     else:
         seat['new_state'] = seat['current_state']
-
     return seat
 
 
@@ -66,13 +65,13 @@ def run(grid):
     while run_round(grid):  # returns True if seats changed during round
         pass
 
-    occupied_seats = 0
+    seats_occupied = 0
     for x_coord in range(globals()['x_max']):
         for y_coord in range(globals()['y_max']):
             if grid[x_coord][y_coord]['new_state'] == '#':
-                occupied_seats += 1
+                seats_occupied += 1
 
-    return occupied_seats
+    return seats_occupied
 
 
 def run_round(grid):
