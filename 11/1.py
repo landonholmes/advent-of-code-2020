@@ -99,6 +99,6 @@ def print_grid(grid):
 
 
 seat_grid = parse_input()
-rounds_ran = run(seat_grid)
-print('Occupied seats: ', rounds_ran)  # 2801
+occupied_seats = run(seat_grid)
+print('Occupied seats: ', occupied_seats)  # 2801
 
