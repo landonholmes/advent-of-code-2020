@@ -49,7 +49,7 @@ def compute_seat_state(grid, seat):
             continue
 
         adjacent_seat = grid[x_adjacent][y_adjacent]
-        if adjacent_seat['old_state'] == '#':  # current_state ???
+        if adjacent_seat['current_state'] == '#':
             adjacent_count += 1
 
     if adjacent_count >= globals()['adjacent_count_to_leave']:
@@ -100,6 +100,6 @@ def print_grid(grid):
 
 seat_grid = parse_input()
 occupied_seats = run(seat_grid)
-print('Occupied seats: ', occupied_seats)  # 2801 and 7646 are wrong, supposed to be 2489
+print('Occupied seats: ', occupied_seats)  # 2801 is wrong, supposed to be 2489
 
 
